@@ -10,6 +10,12 @@ clone this repo and cd to this dir then run this command.
 docker-compose up
 ```
 
+If you are using macOS with m1, please enable this feature on docker [(fix m1 issue)](https://github.com/microsoft/mssql-docker/issues/668#issuecomment-1532668362).
+
+```
+ docker-compose -f .docker-compose-mac-m1.yml up
+ ```
+
 ## TODO
 
 Please search with `TODO:` in dir to update you config.

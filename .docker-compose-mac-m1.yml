@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  database:
+    platform: linux/amd64
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-server
+    environment:
+      MSSQL_SA_PASSWORD: "mssqlS4p4ssw02d"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./db:/var/opt/mssql
+
+  php-app:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-app
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
