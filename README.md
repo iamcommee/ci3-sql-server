@@ -4,7 +4,7 @@ This is an example repo to run CI3 and SQL SERVER on docker.
 
 ## How to start the project
 
-cd to this dir then run
+clone this repo and cd to this dir then run this command.
 
 ```
 docker-compose up
